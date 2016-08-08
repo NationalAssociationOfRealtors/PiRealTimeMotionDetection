@@ -58,19 +58,19 @@ def write_video(stream,file_name):
 
 def upload_files_s3(file_names):
 	"""Upload files to s3."""
-	try:
-		for item in file_names:
+	for item in file_names:
+		try:
 			s3.upload_file(item,bucket,item)
-	except Exception:
-		pass
+		except Exception:
+			pass
 	
 def remove_files_os(file_names):
 	"""Remove files from os."""
-	try:
-		for item in file_names:
+	for item in file_names:
+		try:
 			remove(item)
-	except Exception:
-		pass
+		except Exception:
+			pass
 
 def save_motion(start,end,magnitude,file_names,current_status,illumination):
 	"""Save key motion data in the database."""

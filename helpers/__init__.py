@@ -45,7 +45,6 @@ def _get_file_names(file_name):
 def _upload_and_remove_files(file_names):
 	"""Upload video and image files to s3, 
 	   then remove them from the system."""
-	   files 
 	try:
 		upload_files_s3(file_names)
 	except Exception:
