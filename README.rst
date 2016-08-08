@@ -93,7 +93,7 @@ Some of our limitions include:
 	* We assume that your system time and timezone is properly configured. 
 	* We assume that you've already created and configured AWS s3.
 	* We assume that your MongoDB is running on a remote machine.
-	* AWS and MongoDB integration is primitive.   
+	* AWS and MongoDB integration is primitive. MongoDB may not be best storage solution.   
 	* Weak logging and error handling.  
 
 
