@@ -59,10 +59,11 @@ with PiCamera() as camera:
 						write_video(stream,file_names[0])
 						while result:
 							"""While motion is detected, wait on the video
-							   encoder for 6 timeout seconds. Modify timeout
+							   encoder for 6 timeout seconds. Modify minimum timeout
 							   seconds as necessary for your specific application.
 							   The more timeout seconds, the more video captured 
-							   after motion is detected."""
+							   after motion is detected. If motion continues after
+							   timeout, recording continues."""
 							camera.wait_recording(6)
 						"""Motion ended. Capture end time, upload video to s3, 
 						   remove video file from system, and save motion data
